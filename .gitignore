@@ -39,3 +39,31 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editor and operating-system files
+/.vscode/
+/.idea/
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# local workspace configuration
+/AGENTS.md
+/CLAUDE.md
+/.agents/
+/.codex/
+
+# credentials and private key material
+.npmrc
+.pypirc
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# local verification output
+/playwright-report/
+/test-results/
