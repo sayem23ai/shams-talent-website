@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="mt-5 space-y-3 text-[17px] text-white/75">
               <p className="[overflow-wrap:anywhere]"><a href={`mailto:${siteData.contact.email}`}>{siteData.contact.email}</a></p>
               <p><a href={siteData.contact.phoneLink}>{siteData.contact.phone}</a></p>
-              <p><a href={siteData.contact.whatsappLink}>{siteData.contact.whatsapp}</a></p>
+              <p><a href={siteData.contact.whatsappLink} target="_blank" rel="noopener noreferrer">{siteData.contact.whatsapp}</a></p>
               <p>India & UAE</p>
             </div>
 

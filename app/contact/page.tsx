@@ -16,7 +16,7 @@ export default function ContactPage() {
           <div className="mt-8 space-y-3 text-lg text-white/80">
             <p><a className="[overflow-wrap:anywhere] hover:text-white" href={`mailto:${siteData.contact.email}`}>{siteData.contact.email}</a></p>
             <p>India: <a href={siteData.contact.phoneLink}>{siteData.contact.phone}</a></p>
-            <p>UAE / WhatsApp: <a href={siteData.contact.whatsappLink}>{siteData.contact.whatsapp}</a></p>
+            <p>UAE / WhatsApp: <a href={siteData.contact.whatsappLink} target="_blank" rel="noopener noreferrer">{siteData.contact.whatsapp}</a></p>
           </div>
         </div>
         <ContactForm />

@@ -7,14 +7,25 @@ export default function ContactForm() {
   const code = country === "India" ? "+91" : "+971";
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (!event.currentTarget.reportValidity()) return;
+
     const data = new FormData(event.currentTarget);
-    const body = [
-      `Full Name: ${data.get("name")}`, `Email Address: ${data.get("email")}`,
-      `Country: ${country}`, `Phone Number: ${code} ${data.get("phone")}`,
-      `City: ${data.get("city")}`, `Position Applying For: ${data.get("position") || "Employer enquiry"}`,
-      `Message: ${data.get("message") || ""}`,
-    ].join("\n");
-    window.location.href = `mailto:${siteData.contact.email}?subject=${encodeURIComponent("Recruitment enquiry - " + data.get("name"))}&body=${encodeURIComponent(body)}`;
+    const value = (field: string) => String(data.get(field) ?? "").trim();
+    const name = value("name");
+    const phone = value("phone");
+    const message = value("message");
+    const subject = name ? `New Website Enquiry - ${name}` : "New Website Enquiry - Shams Talent";
+    const lines = [
+      ["Name", name],
+      ["Email", value("email")],
+      ["Country", value("country")],
+      ["Phone", phone ? [value("code"), phone].filter(Boolean).join(" ") : ""],
+      ["City", value("city")],
+      ["Position Applying For", value("position")],
+    ].filter(([, content]) => content).map(([label, content]) => `${label}: ${content}`);
+    const body = [lines.join("\n"), message ? `Message:\n${message}` : ""].filter(Boolean).join("\n\n");
+
+    window.location.href = `mailto:${siteData.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setHandoff(true);
   }
   return <form onSubmit={submit} className="contact-form rounded-lg bg-white p-6 text-[var(--navy)] sm:p-9">

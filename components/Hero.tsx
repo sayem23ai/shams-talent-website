@@ -10,7 +10,7 @@ export default function Hero() {
         <h1 className="mt-6 font-serif text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">Find the right people.<br />Build stronger teams.</h1>
         <p className="mt-7 max-w-xl text-xl leading-relaxed text-slate-600">{siteData.brand.description}</p>
         <div className="mt-8 flex flex-wrap gap-4">
-          <a href={siteData.contact.phoneLink} className="button button-gold">Contact Us</a>
+          <a href={siteData.contact.whatsappLink} target="_blank" rel="noopener noreferrer" className="button button-gold">Contact Us</a>
           <Link href="/services" className="button border border-[var(--navy)]/20 bg-white">Explore Services</Link>
         </div>
         <p className="mt-8 text-base font-semibold text-slate-600">India &middot; UAE &middot; Focused Recruitment Support</p>

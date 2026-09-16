@@ -113,7 +113,7 @@ Static images live in `public/` and are referenced from the URL root. For exampl
 
 ## Contact Actions
 
-Business details are maintained in `data/siteData.ts`. Contact Us opens the configured telephone contact using `tel:`. Send CV opens the configured recruitment email using `mailto:`. The UAE WhatsApp contact remains available through the contact details.
+Business details are maintained in `data/siteData.ts`. Contact Us opens WhatsApp in a new tab using `https://wa.me/971569178116`, preserving the existing UAE number. Send CV opens `mailto:tanveer@shamstalentmanagementservices.com?subject=CV%20Submission`. All company email links and the contact form use this email address. The India telephone contact remains available through the contact details using `tel:`.
 
 The form prepares an email draft containing the entered details. Visitors must review and send the email in their own mail application, attaching a CV there if needed. The website does not upload CVs, store applications or claim a successful server submission. A configured email application is required for the draft handoff; the business email address is also visible for manual contact.
 

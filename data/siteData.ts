@@ -14,7 +14,7 @@ export const siteData = {
   },
 
   contact: {
-    email: "shams.freelance.recruitment@gmail.com",
+    email: "tanveer@shamstalentmanagementservices.com",
     phone: "+91 7985550189",
     phoneLink: "tel:+917985550189",
     whatsapp: "+971 56 917 8116",
@@ -132,6 +132,6 @@ export const siteData = {
 
   candidateCTA: {
     label: "Submit Your CV",
-    href: "mailto:shams.freelance.recruitment@gmail.com?subject=CV Submission",
+    href: "mailto:tanveer@shamstalentmanagementservices.com?subject=CV%20Submission",
   },
 };
